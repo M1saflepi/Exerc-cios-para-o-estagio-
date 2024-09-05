@@ -1,0 +1,44 @@
+def descobrir_interruptores():
+  """Descobre qual interruptor controla cada lâmpada.
+
+  Retorna:
+    Uma lista com 3 elementos, onde cada elemento indica o número do interruptor
+    que controla a lâmpada correspondente.
+  """
+
+  # Primeira ida: liga o primeiro interruptor e depois o segundo
+  primeiro_interruptor = True
+  segundo_interruptor = True
+
+  # Simula a observação das lâmpadas na primeira ida
+  # Substitua esta parte por sua própria lógica de observação
+  lampada_acesa = 2  # Supondo que a segunda lâmpada está acesa
+  lampada_quente = 1  # Supondo que a primeira lâmpada está quente
+
+  # Determina qual interruptor controla cada lâmpada com base na primeira ida
+  controladores = [None, None, None]
+  if lampada_acesa == 1:
+    controladores[0] = 2
+  elif lampada_acesa == 2:
+    controladores[1] = 2
+  else:
+    controladores[2] = 2
+
+  if lampada_quente == 1:
+    controladores[0] = 1
+  elif lampada_quente == 2:
+    controladores[1] = 1
+  else:
+    controladores[2] = 1
+
+  # Segunda ida: determina o controlador da última lâmpada
+  for i in range(3):
+    if controladores[i] is None:
+      controladores[i] = 3
+      break
+
+  return controladores
+
+# Exemplo de uso:
+resultado = descobrir_interruptores()
+print(resultado)  # Imprime uma lista com os números dos interruptores
