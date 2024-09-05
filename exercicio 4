@@ -1,0 +1,26 @@
+def sequencia_a(n):
+  return 2*n - 1
+
+def sequencia_b(n):
+  return 2**n
+
+def sequencia_c(n):
+  return n**2
+
+def sequencia_d(n):
+  return (2*n)**2
+
+def sequencia_e(n):
+  if n <= 2:
+    return 1
+  else:
+    return sequencia_e(n-1) + sequencia_e(n-2)
+
+# A sequência f não possui uma regra clara, então não foi implementada uma função específica.
+
+# Exemplos de uso:
+print(sequencia_a(5))  # Imprime 9
+print(sequencia_b(7))  # Imprime 128
+print(sequencia_c(7))  # Imprime 49
+print(sequencia_d(5))  # Imprime 100
+print(sequencia_e(8))  # Imprime 13
