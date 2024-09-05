@@ -1,0 +1,24 @@
+def contar_as(texto):
+  """Conta o número de ocorrências da letra 'a' (maiúscula ou minúscula) em uma string.
+
+  Args:
+    texto (str): A string a ser analisada.
+
+  Returns:
+    int: O número de ocorrências da letra 'a'.
+  """
+
+  # Converte toda a string para minúscula para facilitar a contagem
+  texto_minusculo = texto.lower()
+
+  # Conta o número de ocorrências da letra 'a'
+  contagem = texto_minusculo.count('a')
+
+  return contagem
+
+# Entrada da string
+texto = input("Digite uma frase: ")
+
+# Chamada da função e exibição do resultado
+resultado = contar_as(texto)
+print(f"A letra 'a' aparece {resultado} vezes na frase.")
